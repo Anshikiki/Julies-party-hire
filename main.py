@@ -116,3 +116,12 @@ def setup_buttons():
     delete_item = Entry(mw)
     delete_item.grid(column=1, row=6)
     Button(mw, text="Delete", command=delete_row).grid(column=2, row=6)
+
+    # Creating a new window for receipt (Testing phase)
+#def new_window():
+ #   global entry_receipt_number
+  #  # get selected items
+   # new = Toplevel(mw)
+    #new.geometry("500x500")
+    #Label(new, text=("Your Reciept Number:" + entry_receipt_number))
+
