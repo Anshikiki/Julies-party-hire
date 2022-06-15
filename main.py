@@ -86,3 +86,12 @@ def delete_row():
     Label(mw, text="       ").grid(column=3, row=item_count + 7)
     Label(mw, text="       ").grid(column=4, row=item_count + 7)
     print_store_details()
+
+# create the buttons and labels
+def setup_buttons():
+    global store_details, entry_customer_name, entry_receipt_number, entry_item_hired, entry_number_items_hired, total_entries, delete_item, Combobox
+    Button(mw, text="Quit", command=quit).grid(column=3, row=2)
+    #Button(mw, text="Receipt Print", command=new_window()).grid(column=3, row=3)
+    Button(mw, text="Append Details", command=input_check).grid(column=3, row=4)
+    Button(mw, text="Print Details", command=print_store_details).grid(column=3, row=5)
+    Label(mw, text="Name").grid(column=0, row=2)
