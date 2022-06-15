@@ -44,3 +44,30 @@ def append_name():
     entry_item_hired.delete(0, 'end')
     entry_number_items_hired.delete(0, 'end')
     total_entries += 1
+
+
+    global error_check
+    error_check = 0
+    if len(entry_customer_name.get()) == 0:
+        # error message box will be displayed
+        messagebox.showerror("Customer name", "Item name is required")
+        # error check will equal 1
+        error_check = 1
+# if nothing is inputted into number entry
+    if len(entry_number_items_hired.get()) == 0:
+        # error message box will be displayed
+        messagebox.showerror("Quantity Hired", "Item quantity is required")
+        error_check = 1
+    if len(entry_number_items_hired.get()) == 0:
+        # error message box will be displayed
+        messagebox.showerror("Quantity Hired", "Item quantity is required")
+        error_check = 1
+    if len(entry_number_items_hired.get()) == 0:
+        # error message box will be displayed
+        messagebox.showerror("Quantity Hired", "Item quantity is required")
+        error_check = 1
+
+    # if error check is 0
+    if error_check == 0:
+        # append details function will be excecuted
+        append_name()
