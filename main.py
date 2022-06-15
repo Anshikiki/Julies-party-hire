@@ -78,3 +78,11 @@ def delete_row():
     del store_details[int(delete_item.get())]
     total_entries = total_entries - 1
     delete_item.delete(0, 'end')
+
+    # This deletes each items label
+    Label(mw, text="       ").grid(column=0, row=item_count + 7)
+    Label(mw, text="       ").grid(column=1, row=item_count + 7)
+    Label(mw, text="       ").grid(column=2, row=item_count + 7)
+    Label(mw, text="       ").grid(column=3, row=item_count + 7)
+    Label(mw, text="       ").grid(column=4, row=item_count + 7)
+    print_store_details()
