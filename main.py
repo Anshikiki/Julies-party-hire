@@ -70,4 +70,11 @@ def append_name():
     # if error check is 0
     if error_check == 0:
         # append details function will be excecuted
-        append_name()
+        
+        
+        # delete a row from the list
+def delete_row():
+    global store_details, delete_item, total_entries, item_count
+    del store_details[int(delete_item.get())]
+    total_entries = total_entries - 1
+    delete_item.delete(0, 'end')
