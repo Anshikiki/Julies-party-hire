@@ -125,3 +125,20 @@ def setup_buttons():
     #new.geometry("500x500")
     #Label(new, text=("Your Reciept Number:" + entry_receipt_number))
 
+# start the program running
+def main():
+    global mw
+    global store_details, total_entries
+    store_details = []
+    total_entries = 0
+    mw = Tk()
+    # The Title
+    mw.title("Julies Party Hire Store")
+    setup_buttons()
+    # This stops the user from being able to make the window larger/smaller
+    mw.resizable(False, False)
+    mw.mainloop()
+
+
+main()
+
