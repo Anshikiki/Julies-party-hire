@@ -29,3 +29,18 @@ def print_store_details():
         Label(mw, text=(store_details[item_count][2])).grid(column=3, row=item_count + 8)
         Label(mw, text=(store_details[item_count][3])).grid(column=4, row=item_count + 8)
         item_count += 1
+
+        # This allows the user to Append the details
+
+def append_name():
+    global store_details, entry_customer_name, entry_receipt_number, entry_item_hired, entry_number_items_hired, total_entries, entries
+
+    # Lists all possible boxes able to be filled and adds it to the rows
+    entries = str([entry_customer_name, entry_receipt_number, entry_item_hired, entry_number_items_hired])
+    store_details.append([entry_customer_name.get(), entry_receipt_number.get(), entry_item_hired.get(), entry_number_items_hired.get()])
+    # This clears out the old information after the details have been appended
+    entry_customer_name.delete(0, 'end')
+    entry_receipt_number.delete(0, 'end')
+    entry_item_hired.delete(0, 'end')
+    entry_number_items_hired.delete(0, 'end')
+    total_entries += 1
