@@ -95,3 +95,24 @@ def setup_buttons():
     Button(mw, text="Append Details", command=input_check).grid(column=3, row=4)
     Button(mw, text="Print Details", command=print_store_details).grid(column=3, row=5)
     Label(mw, text="Name").grid(column=0, row=2)
+
+    entry_customer_name = Entry(mw)
+    entry_customer_name.grid(column=1, row=2)
+    Label(mw, text="Receipt Number").grid(column=0, row=3)
+    entry_receipt_number = Entry(mw)
+    entry_receipt_number.grid(column=1, row=3)
+
+    Label(mw, text="Item Hired").grid(column=0, row=4)
+    item = StringVar()
+    # Combo box to allow the user to scroll and choose different items
+    entry_item_hired = ttk.Combobox(mw, textvariable=item, state="readonly", values=("BBQ LED_lights Balloons Party_animals"), width = 17)
+    entry_item_hired.grid(column=1, row=4)
+
+    Label(mw, text="NO. Hired").grid(column=0, row=5)
+    entry_number_items_hired = Entry(mw)
+    entry_number_items_hired.grid(column=1, row=5)
+
+    Label(mw, text="Row #").grid(column=0, row=6)
+    delete_item = Entry(mw)
+    delete_item.grid(column=1, row=6)
+    Button(mw, text="Delete", command=delete_row).grid(column=2, row=6)
