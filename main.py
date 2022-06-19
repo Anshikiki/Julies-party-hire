@@ -45,7 +45,7 @@ def append_name():
     entry_number_items_hired.delete(0, 'end')
     total_entries += 1
 
-
+def input_check():
     global error_check
     error_check = 0
     if len(entry_customer_name.get()) == 0:
@@ -69,6 +69,8 @@ def append_name():
 
     # if error check is 0
     if error_check == 0:
+        append_name
+        
         # append details function will be excecuted
         
         
@@ -87,7 +89,7 @@ def delete_row():
     Label(mw, text="       ").grid(column=4, row=item_count + 7)
     print_store_details()
 
-# create the buttons and labels
+# create the buttons and labels to help Julie understand what 
 def setup_buttons():
     global store_details, entry_customer_name, entry_receipt_number, entry_item_hired, entry_number_items_hired, total_entries, delete_item, Combobox
     Button(mw, text="Quit", command=quit).grid(column=3, row=2)
@@ -105,8 +107,9 @@ def setup_buttons():
     Label(mw, text="Item Hired").grid(column=0, row=4)
     item = StringVar()
     # Combo box to allow the user to scroll and choose different items
-    entry_item_hired = ttk.Combobox(mw, textvariable=item, state="readonly", values=("BBQ LED_lights Balloons Party_animals"), width = 17)
+    entry_item_hired = ttk.Combobox(mw, textvariable=item, state="readonly", values=("Decorations LED_lights Balloons Party_animals Ribbons Confetti Party_Hats Banners Other"), width = 17)
     entry_item_hired.grid(column=1, row=4)
+
 
     Label(mw, text="NO. Hired").grid(column=0, row=5)
     entry_number_items_hired = Entry(mw)
