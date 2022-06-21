@@ -133,7 +133,7 @@ def main():
     global root
     global store_details, total_entries
     global main_color
-    main_color = "SpringGreen2"
+    main_color = "cyan"
     store_details = []
     total_entries = 0
     root = Tk()
