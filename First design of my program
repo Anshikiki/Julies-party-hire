@@ -1,4 +1,3 @@
-<<<<<<< HEAD:test 1.py
 #JULIE'S PARTY HIRE
 #Julie runs a party hire store and has a range of items for hire. 
 #This program is designed so we can help Julie keep track of items that are currently unavailable
@@ -130,7 +129,7 @@ def setup_buttons():
            width=10) .grid(column=4, row=0, sticky=E)
     Button(main_window, text="Append Details",
            command=check_inputs) .grid(column=3, row=1)
-    Button(main_window, text="Print Details", command=print_camp_details,
+    Button(main_window, text="Print Details", command='print_store_details' ,
            width=10) .grid(column=4, row=1, sticky=E)
     Label(main_window, text="No of Campers") .grid(column=0, row=2, sticky=E)
     entry_campers = Entry(main_window)
@@ -162,7 +161,6 @@ def main():
 
 
 main()
-=======
 #JULIE'S PARTY HIRE
 #Julie runs a party hire store and has a range of items for hire. 
 #This program is designed so we can help Julie keep track of items that are currently unavailable
@@ -257,4 +255,4 @@ main()
 
 
 
->>>>>>> e71a8864c694d500e345e4427c9bea0cf2e0555c:First design of my program
+
